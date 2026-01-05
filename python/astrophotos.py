@@ -249,7 +249,14 @@ def score(year, month, day, offset, time, end_time, good_hours=0, library=None):
 def ranking(year, month, day, end_year, end_month, end_day, time, end_time, offset, tally=None):
     '''
     Given a date range, the function will return a ranking of the
-    best nights for taking astrophotos
+    best nights for taking astrophotos, where the hours shown
+    are optimal for astrophotos. Offset arguement is the difference
+    between your timezone and UTC.
+
+    Format:
+    "[(# of good hours, [(date, optimal hour 1), (date, optimal hour 2)])]
+
+   
     '''
     if tally is None:
         tally = []
@@ -293,7 +300,7 @@ def ranking(year, month, day, end_year, end_month, end_day, time, end_time, offs
            
     return ranking(year, month, day, end_year, end_month, end_day, time, end_time, offset, tally)
    
-data = ranking(2026, 1, 7, 2026, 2, 17, "20:00", '23:00', 11)
+data = ranking(2026, 6, 7, 2026, 6, 17, "20:00", '23:00', 11)
 pprint(data, width=80) #use pretty print!
 
 
