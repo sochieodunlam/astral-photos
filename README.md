@@ -1,4 +1,4 @@
-# astral-photos'
+# astral-photos
 
 Resources:
 - https://www.fffuel.co/nnnoise/

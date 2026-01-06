@@ -40,7 +40,7 @@ let width = d3.select("#map").node().getBoundingClientRect().width
 
   let map = svg.append("g")
 
-  d3.json("data/world.json", function(data) {
+  d3.json("../data/world.json", function(data) {
     map.append("g")
     .attr("class", "countries" )
     .selectAll("path")
