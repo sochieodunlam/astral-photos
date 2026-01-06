@@ -1,3 +1,5 @@
+// based on https://observablehq.com/@michael-keith/draggable-globe-in-d3
+
 let width = d3.select("#map").node().getBoundingClientRect().width
   let height = 500
   const sensitivity = 75
@@ -30,7 +32,7 @@ let width = d3.select("#map").node().getBoundingClientRect().width
     const k = sensitivity / projection.scale()
     projection.rotate([
       rotate[0] + d3.event.dx * k,
-      rotate[1] - d3.event.dy * k
+    //   rotate[1] - d3.event.dy * k
     ])
     path = d3.geoPath().projection(projection)
     svg.selectAll("path").attr("d", path)
@@ -39,7 +41,7 @@ let width = d3.select("#map").node().getBoundingClientRect().width
   let map = svg.append("g")
 
   d3.json("data/world.json", function(data) {
-  map.append("g")
+    map.append("g")
     .attr("class", "countries" )
     .selectAll("path")
     .data(data.features)
@@ -51,13 +53,12 @@ let width = d3.select("#map").node().getBoundingClientRect().width
     .style('stroke-width', 0.3)
     .style("opacity",0.8)
 
-  //rotate
+  // Rotate
   d3.timer(function(elapsed) {
     const rotate = projection.rotate()
-    const k = sensitivity / projection.scale()
     projection.rotate([
-      rotate[0] - 1 * k,
-      rotate[1]
+      rotate[0] -1 * 0.1,
+    //   rotate[1]
     ])
     path = d3.geoPath().projection(projection)
     svg.selectAll("path").attr("d", path)
