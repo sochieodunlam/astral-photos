@@ -300,8 +300,8 @@ def ranking(year, month, day, end_year, end_month, end_day, time, end_time, offs
            
     return ranking(year, month, day, end_year, end_month, end_day, time, end_time, offset, tally)
    
-data = ranking(2026, 6, 7, 2026, 6, 17, "20:00", '23:00', 11)
-pprint(data, width=80) #use pretty print!
+# data = ranking(2026, 6, 7, 2026, 6, 17, "20:00", '23:00', 11)
+# pprint(data, width=80) #use pretty print!
 
 
 '''

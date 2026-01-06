@@ -35,6 +35,10 @@ body {
     border-width: 2px;
 }
 
-#map {
-
+#search-city {
+    /* border: 0; */
+    /* border-style: dotted; */
+    border-color: transparent;
+    border-radius: 15px;
+    outline: 0;
 }
