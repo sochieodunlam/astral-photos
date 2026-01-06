@@ -1,0 +1,43 @@
+body {
+    background-image: url("/other/noise.svg");
+    overflow: hidden;
+    /* background-repeat: repeat; */ 
+}
+
+#whole-screen {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#left-half {
+    width: 60vw;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 0, 217);
+    border-width: 3px;
+}
+
+#right-half {
+    width: 40vw;
+    display: flex;
+    justify-content: center; align-items: center;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-color: red;
+    border-width: 3px;
+}
+
+
+#selection {
+    width: 500px;
+    height: 500px;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-width: 2px;
+}
